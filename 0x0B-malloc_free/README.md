@@ -1,19 +1,19 @@
-C - malloc and free
-Introduction
+## C - malloc and free
+
+# Introduction
 In C programming, malloc and free are functions used for dynamic memory allocation. They allow you to allocate and deallocate memory at runtime, providing flexibility in managing memory resources. This readme will provide an overview of malloc and free functions, their usage, and guidelines for efficient memory management.
 
-malloc Function
+# malloc Function
 The malloc function is used to dynamically allocate memory in C. It reserves a block of memory of a specified size and returns a pointer to the first byte of the allocated memory. The syntax for malloc is as follows:
 
-c
-Copy code
+
+
 void* malloc(size_t size);
 The size parameter specifies the number of bytes to allocate.
 The return value is a void pointer (void*) that can be cast to the appropriate type.
 Here's an example that demonstrates the usage of malloc:
 
-c
-Copy code
+
 #include <stdio.h>
 #include <stdlib.h>
 
@@ -44,19 +44,18 @@ int main() {
 
     return 0;
 }
-Remember to include the <stdlib.h> header file to use the malloc and free functions.
 
-free Function
+# Remember to include the <stdlib.h> header file to use the malloc and free functions.
+
+# free Function
 The free function is used to deallocate memory previously allocated using malloc, calloc, or realloc. It releases the memory block back to the system, making it available for future use. The syntax for free is as follows:
 
-c
-Copy code
+
+
 void free(void* ptr);
 The ptr parameter is a pointer to the memory block that needs to be deallocated.
 Here's an example demonstrating the usage of free:
 
-c
-Copy code
 #include <stdlib.h>
 
 int main() {
@@ -69,9 +68,10 @@ int main() {
 
     return 0;
 }
+
 It's crucial to remember that once you have deallocated memory using free, you should no longer access that memory. Doing so can lead to undefined behavior or segmentation faults.
 
-Guidelines for Efficient Memory Management
+# Guidelines for Efficient Memory Management
 Proper memory management is essential for efficient and bug-free programs. Here are some guidelines to follow when using malloc and free:
 
 Check for NULL after malloc: malloc can fail if there is insufficient memory available. Always check the return value against NULL to ensure successful memory allocation.
@@ -88,5 +88,5 @@ Understand memory ownership and lifetime: Clearly define the ownership and lifet
 
 By following these guidelines, you can effectively manage memory in your C programs and ensure efficient resource utilization.
 
-Conclusion
+# Conclusion
 The malloc and free functions provide a mechanism for dynamic memory allocation and deallocation in C. They allow you to allocate memory at runtime and release it when it is no longer needed. By using these functions correctly and following good memory management practices, you can build reliable and efficient programs.
