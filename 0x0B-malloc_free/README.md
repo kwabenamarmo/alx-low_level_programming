@@ -8,12 +8,12 @@ The malloc function is used to dynamically allocate memory in C. It reserves a b
 
 
 
-void* malloc(size_t size);
+# void* malloc(size_t size);
 The size parameter specifies the number of bytes to allocate.
 The return value is a void pointer (void*) that can be cast to the appropriate type.
 Here's an example that demonstrates the usage of malloc:
 
-
+     // memory allocation 
 #include <stdio.h>
 #include <stdlib.h>
 
@@ -44,7 +44,7 @@ int main() {
 
     return 0;
 }
-
+                     
 # Remember to include the <stdlib.h> header file to use the malloc and free functions.
 
 # free Function
