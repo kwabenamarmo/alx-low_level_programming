@@ -1,3 +1,10 @@
+/**
+ * struct list_s - singly linked list
+ * @str: string - (string with malloc)
+ * @len: length of string
+ * @next: points to the next node in line
+ * Description: singly linked list node structure
+ */
 typedef struct list_s
 {
 	char *str;
