@@ -5,12 +5,13 @@
  */
 int get_endianness(void)
 {
-	union {
+	union
+	{
 		unsigned int i;
 		char c[sizeof(unsigned int)];
 	} u;
 
 	u.i = 1;
 
-	return (u.c[0] == 1) ? 1 : 0;
+	return ((u.c[0] == 1) ? 1 : 0);
 }
